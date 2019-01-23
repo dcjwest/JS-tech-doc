@@ -1,0 +1,198 @@
+
+/* Font Embedding */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: #A0A0A0;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: lighter;
+  line-height: 1.5;
+  min-width: 290px;
+}
+
+p {
+  margin: 1em 0;
+}
+
+/*========================================*/
+
+/* Header and Neavigation */
+
+#navbar {
+  background-color: #fff;
+  border-right: solid;
+  border-color:rgba(0,22,22,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 290px;
+  width: 300px;
+  height: 100%;
+}
+
+header {
+  font-size: 30px;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: normal;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0;
+}
+
+#navbar ul {
+  height: 88%;
+  overflow-y: auto;
+}
+
+#navbar li {
+  border: 1px solid #A0A0A0;
+  border-bottom-width: 0px;
+  list-style-type: none;
+  padding: 8px;
+  padding-left: 40px;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a, #main-doc a {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#navbar li:hover {
+  background-color: red;
+  color: #fff;
+}
+
+/*========================================*/
+
+/* Main Document Styles */
+
+#main-doc a:hover {
+  color: #F00;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 10px;
+}
+
+.topBtn {
+  border: 2px solid #f00;
+  border-radius: 4px;
+  display: block;
+  font-size: 0.9em;
+  font-weight: normal;
+  padding: 5px 10px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.topBtn:hover {
+  background-color: #F00;
+  color: #fff !important;
+  transition: .2s;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 0px 20px 0px;
+  padding: 20px;
+  position: relative;
+}
+
+section article {
+  font-size: 1em;
+  margin: 15px;
+}
+
+section li {
+  list-style-type: circle;
+  margin: 20px 0px 0px 20px;
+}
+
+code {
+  background-color: #000;
+  border-radius: 5px;
+  color: #0F0;
+  display: block;
+  line-height: 2;
+  margin: 10px auto;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+  width: 50%;
+}
+
+/*========================================*/
+
+/* Media Queries */
+
+@media screen and (max-width: 815px) {
+  #navbar {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 275px;
+    z-index: 1;
+  }
+  #navbar ul {
+    border: 1px solid #A0A0A0;
+    height: 207px;
+  }
+  
+  #main-doc {
+    position: relative;
+    margin-left: 0;
+    margin-top: 270px;
+  }
+  
+  code {width: 80%;}
+}
+
+@media only screen and (max-width: 500px) {
+  code {
+    font-size: 0.8em;
+    min-width: 233px;
+    width: 90%;
+  }
+  header {
+    font-size: 1.4em;
+  }
+  
+  #main-doc {
+    padding: 5;
+  }
+  
+  .topBtn {
+    padding: 2.5px 5px;
+    right: 8px;
+    top: 8px;
+  }
+}
